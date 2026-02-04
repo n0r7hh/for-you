@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root{
+  --red: #d3172a;
+  --white: #ffffff;
+  --tap: 56px;
+}
+
+body{
+  margin: 0;
+  background: var(--white);
+  color: var(--red);
+  font-family: system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+}
+
+/* center full screen */
+.screen{
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding:
+    calc(20px + env(safe-area-inset-top))
+    20px
+    calc(20px + env(safe-area-inset-bottom));
+}
+
+.hidden{
+  display: none;
+}
+
+/* letter */
+.letterImg{
+  width: min(320px, 70vw);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.letterImg:active{
+  transform: scale(0.96);
+}
+
+/* center content */
+.centerText{
+  text-align: center;
+  max-width: 520px;
+  display: grid;
+  gap: 18px;
+  place-items: center;
+}
+
+/* 🌹 bouquet */
+.flowerImg{
+  width: min(220px, 55vw);
+  height: auto;
+  animation: fadeIn 0.8s ease;
+}
+
+/* 💌 typewriter text */
+.typeText{
+  font-size: 18px;
+  line-height: 1.7;
+  white-space: pre-line;
+  max-width: 36ch;
+}
+
+/* blinking cursor */
+.typeText::after{
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn{
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* back button */
+.backBtn{
+  min-height: var(--tap);
+  border: 2px solid var(--red);
+  background: white;
+  color: var(--red);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- LETTER SCREEN -->
+  <section class="screen" id="screenLetter">
+    <img
+      src="assets/letter.png"
+      id="letterBtn"
+      class="letterImg"
+      alt="Open letter"
+    />
+  </section>
+
+
+  <!-- MESSAGE SCREEN -->
+  <section class="screen hidden" id="screenText">
+    <div class="centerText">
+
+      <!-- 🌹 bouquet -->
+      <img src="assets/roses.png" class="flowerImg" alt="Bouquet of roses" />
+
+      <!-- 💌 typewriter text -->
+      <p id="typeText" class="typeText"></p>
+
+      <button id="backBtn" class="backBtn">← back</button>
+    </div>
+  </section>
+
+
+  <!-- 🎵 music -->
+  <audio id="bgMusic" preload="auto" loop>
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
